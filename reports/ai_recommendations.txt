@@ -1,0 +1,13 @@
+Average View→Purchase conversion rate: 7.65%
+[2019-11-15] Low conversion (0.00%). Investigate checkout friction, pricing, or product detail page clarity.
+[2019-11-14] Low conversion (5.18%). Investigate checkout friction, pricing, or product detail page clarity.
+[2019-11-13] Low conversion (5.72%). Investigate checkout friction, pricing, or product detail page clarity.
+[2019-11-12] Low conversion (5.73%). Investigate checkout friction, pricing, or product detail page clarity.
+[2019-11-20] Low conversion (6.04%). Investigate checkout friction, pricing, or product detail page clarity.
+[2019-11-19] Low conversion (6.05%). Investigate checkout friction, pricing, or product detail page clarity.
+[2019-11-10] Low conversion (6.17%). Investigate checkout friction, pricing, or product detail page clarity.
+[2019-11-15] Cart→Purchase weak. Recommend: reduce checkout steps, add trust badges, clarify shipping/returns.
+[2019-11-14] Cart→Purchase weak. Recommend: reduce checkout steps, add trust badges, clarify shipping/returns.
+[2019-11-16] Cart→Purchase weak. Recommend: reduce checkout steps, add trust badges, clarify shipping/returns.
+[2019-11-13] Cart→Purchase weak. Recommend: reduce checkout steps, add trust badges, clarify shipping/returns.
+[2019-11-12] Cart→Purchase weak. Recommend: reduce checkout steps, add trust badges, clarify shipping/returns.
