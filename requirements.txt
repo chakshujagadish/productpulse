@@ -1,0 +1,11 @@
+pandas==2.2.2
+numpy==2.0.1
+pyarrow==17.0.0
+duckdb==1.0.0
+jupyter==1.1.1
+ipykernel==6.29.5
+matplotlib==3.9.1
+scikit-learn==1.5.1
+streamlit==1.37.1
+plotly==5.23.0
+python-dateutil==2.9.0.post0
