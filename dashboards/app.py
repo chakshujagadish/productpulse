@@ -1,35 +1,26 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
 import plotly.express as px
 
-st.title("ProductPulse – Product Analytics Dashboard")
+st.set_page_config(page_title="ProductPulse", layout="wide")
 
-# Load metrics
+st.title("ProductPulse — Product Growth & Retention Dashboard")
+
 funnel = pd.read_csv("reports/funnel_daily.csv")
+ret = pd.read_csv("reports/retention_weekly.csv")
 
-st.subheader("Daily Funnel Metrics")
+col1, col2 = st.columns(2)
 
-fig = px.line(
-    funnel,
-    x="event_date",
-    y=["viewers", "carters", "purchasers"],
-    title="User Funnel Activity"
-)
+with col1:
+    st.subheader("Funnel (Daily)")
+    fig = px.line(funnel, x="event_date", y=["viewers","carters","purchasers"])
+    st.plotly_chart(fig, use_container_width=True)
 
-st.plotly_chart(fig)
+with col2:
+    st.subheader("View → Purchase Conversion")
+    fig2 = px.line(funnel, x="event_date", y="view_to_purchase_rate")
+    st.plotly_chart(fig2, use_container_width=True)
 
-st.subheader("Conversion Rate")
-
-fig2 = px.line(
-    funnel,
-    x="event_date",
-    y="view_to_purchase_rate",
-    title="View to Purchase Conversion Rate"
-)
-
-st.plotly_chart(fig2)
-
-st.subheader("AI Product Recommendations")
-
+st.subheader("AI Recommendations")
 with open("reports/ai_recommendations.txt") as f:
     st.text(f.read())
