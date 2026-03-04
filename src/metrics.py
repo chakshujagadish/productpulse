@@ -12,19 +12,17 @@ def run():
 
     run_sql_file(con, "sql/01_create_tables.sql")
     run_sql_file(con, "sql/02_metrics.sql")
-
-    # create user feature table
+    run_sql_file(con, "sql/03_feature_adoption.sql")
     run_sql_file(con, "sql/04_user_features.sql")
 
-    # export reports
     con.execute("COPY funnel_daily TO 'reports/funnel_daily.csv' (HEADER, DELIMITER ',');")
     con.execute("COPY retention_weekly TO 'reports/retention_weekly.csv' (HEADER, DELIMITER ',');")
+    con.execute("COPY adoption_retention TO 'reports/adoption_retention.csv' (HEADER, DELIMITER ',');")
     con.execute("COPY user_features TO 'reports/user_features.csv' (HEADER, DELIMITER ',');")
 
-    print("Saved reports:")
-    print("reports/funnel_daily.csv")
-    print("reports/retention_weekly.csv")
-    print("reports/user_features.csv")
+    print("Saved all reports")
+
+    con.close()
 
     con.close()
 
